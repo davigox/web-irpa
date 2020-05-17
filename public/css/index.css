@@ -4,3 +4,29 @@ body{
     padding: 0;
     font-size: 16px;
 }
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+/* css header */
+.header{
+    background-color: #02559E;
+}
+
+/* css navbar */
+
+.navbar{
+    background-color: #146BB8;
+}
+
+/* css container */
+
+.container{
+    background-color: #F2F9FF;
+}
+
+/* css footer */
+.footer{
+    background-color: #0D2F4C;
+}
