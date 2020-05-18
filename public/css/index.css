@@ -20,6 +20,17 @@ body{
 .navbar{
     background-color: #146BB8;
     height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar__container{
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 40px;
+    background-color: cadetblue;
 }
 
 /* css container */
