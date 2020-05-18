@@ -72,8 +72,37 @@ body{
 .navbar{
     background-color: #146BB8;
     height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.navbar__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 700px;
+    height: 40px;
+    /* background-color: cadetblue; */
+}
+.navbar__container--link{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+.navbar__container--link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+@media only screen and (max-width: 600px) {
+    .navbar__container{
+        width: 100%;
+    }
+    .navbar__container--link{
+        font-size: 13px;
+    }
+}
 /* css container */
 
 .container{
