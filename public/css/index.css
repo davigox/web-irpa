@@ -12,21 +12,25 @@ body{
 /* css header */
 .header{
     background-color: #02559E;
+    height: 140px;
 }
 
 /* css navbar */
 
 .navbar{
     background-color: #146BB8;
+    height: 40px;
 }
 
 /* css container */
 
 .container{
     background-color: #F2F9FF;
+    height: calc(100vh - 220px);
 }
 
 /* css footer */
 .footer{
     background-color: #0D2F4C;
+    height: 40px;
 }
