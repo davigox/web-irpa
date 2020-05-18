@@ -86,7 +86,7 @@ body{
     /* background-color: cadetblue; */
 }
 .navbar__container--link{
-    color: white;
+    color: #F2F9FF;
     text-decoration: none;
     font-weight: 500;
     font-size: 20px;
@@ -109,7 +109,70 @@ body{
     background-color: #F2F9FF;
     height: calc(100vh - 220px);
 }
+.main__container{
+    width: 90%;
+    margin: 0;
+    padding: 0;
+}
 
+.titulos{
+    color: #707070;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* css card imagenes */
+.imagenes__container{
+    width: 100%;
+    height: 170px;
+    padding-top: 10px;
+    background-color: white;
+}
+.imagen__container{
+    width: 250px;
+    height: 150px;
+    display: flex;
+    background-color: #F6F7F8;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #aaaaaa;
+}
+.imagen__container--img{
+    width: 100px;
+    height: 150px;
+    border-radius: 5px 0px 0px 5px;
+}
+.imagen__container--container{
+    padding-left: 5px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.imagen__container--titulo{
+    margin: 0;
+    font-weight: 500;
+    font-size: 12px;
+    color: #707070;
+}
+.imagen__container--autor{
+    margin: 0;
+    font-weight: 300;
+    font-size: 10px;
+    color: #707070;
+}
+.imagen__container--fecha{
+    margin: 0;
+    font-weight: 400;
+    font-size: 10px;
+    color: #707070;
+}
+.imagen__container--descripcion{
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    color: #707070;
+}
 /* css footer */
 .footer{
     position: fixed;
@@ -134,7 +197,7 @@ body{
 }
 .footer__container--link{
     text-decoration: none;
-    color: white;
+    color: #F2F9FF;
     font-size: 16px;
     padding-right: 30px;
 }
