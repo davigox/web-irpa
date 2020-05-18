@@ -123,18 +123,36 @@ body{
 
 /* css card imagenes */
 .imagenes__container{
-    width: 100%;
+    width: auto;
     height: 170px;
-    padding-top: 10px;
+    padding: 10px;
     background-color: white;
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* white-space: nowrap; */
+}
+.imagenes__container::-webkit-scrollbar {
+    /* width: 50px; */
+    height: 10px;
+}
+.imagenes__container::-webkit-scrollbar-thumb {
+    background: #499FEB;
+    border-radius: 4px;
+}
+.imagenes__container::-webkit-scrollbar-track {
+    background: #D4E9FC;
+    border-radius: 4px;
 }
 .imagen__container{
+    margin-right: 15px;
     width: 250px;
     height: 150px;
     display: flex;
     background-color: #F6F7F8;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px #aaaaaa;
+    box-shadow: 1px 1px 6px gray;
 }
 .imagen__container--img{
     width: 100px;
