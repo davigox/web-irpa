@@ -23,6 +23,7 @@ body{
     width: 700px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .header__container--logo{
     width: 100px;
@@ -49,6 +50,22 @@ body{
     font-weight: 400;
     font-size: 20px;
     margin: 0;
+}
+@media only screen and (max-width: 600px) {
+    .header__container--logo{
+        width: 60px;
+        height: 60px;
+    }
+    .header__container__texto{
+        width: 250px;
+    }
+    .header__container__texto--titulo{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .header__container__texto--parrafo{
+        font-size: 15px;
+    }
 }
 /* css navbar */
 
