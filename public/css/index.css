@@ -112,6 +112,38 @@ body{
 
 /* css footer */
 .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background-color: #0D2F4C;
+    opacity: 0.9;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.footer__container{
+    display: flex;
+    text-align: end;
+    justify-content: flex-end;
+    align-items: center;
+    width: 700px;
+    height: 40px;
+    /* background-color: coral; */
+}
+.footer__container--link{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding-right: 30px;
+}
+.footer__container--link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .footer__container{
+        width: 100%;
+    }
 }
