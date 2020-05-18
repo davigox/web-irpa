@@ -14,7 +14,24 @@ body{
     background-color: #02559E;
     height: 140px;
 }
-
+.header__container{
+    width: 700px;
+    display: flex;
+    justify-content: center;
+}
+.header__container--logo{
+    width: 40px;
+    height: 40px;
+}
+.header__container__texto{
+    width: 500px;
+}
+.header__container__texto--titulo{
+    color: white;
+}
+.header__container__texto--parrafo{
+    color: white;
+}
 /* css navbar */
 
 .navbar{
