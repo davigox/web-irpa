@@ -51,22 +51,7 @@ body{
     font-size: 20px;
     margin: 0;
 }
-@media only screen and (max-width: 600px) {
-    .header__container--logo{
-        width: 60px;
-        height: 60px;
-    }
-    .header__container__texto{
-        width: 250px;
-    }
-    .header__container__texto--titulo{
-        font-size: 20px;
-        letter-spacing: 2px;
-    }
-    .header__container__texto--parrafo{
-        font-size: 15px;
-    }
-}
+
 /* css navbar */
 
 .navbar{
@@ -95,19 +80,12 @@ body{
     cursor: pointer;
     text-decoration: underline;
 }
-@media only screen and (max-width: 600px) {
-    .navbar__container{
-        width: 100%;
-    }
-    .navbar__container--link{
-        font-size: 13px;
-    }
-}
+
 /* css container */
 
 .container{
     background-color: #D4E9FC;
-    height: calc(100vh + 250px);
+    height: calc(100vh + 350px);
 }
 .main__container{
     width: 95%;
@@ -124,7 +102,7 @@ body{
 /* css card imagenes */
 .imagenes__container{
     width: auto;
-    height: 170px;
+    height: 250px;
     padding: 10px;
     background-color: white;
     overflow-y: hidden;
@@ -146,15 +124,15 @@ body{
 .imagen__container{
     margin-right: 15px;
     width: 300px;
-    height: 150px;
+    height: 230px;
     display: flex;
     background-color: #F6F7F8;
     border-radius: 5px;
     box-shadow: 1px 1px 6px gray;
 }
 .imagen__container--img{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 230px;
     border-radius: 5px 0px 0px 5px;
 }
 .imagen__container--container{
@@ -254,7 +232,7 @@ body{
 /* css Notas */
 .notas__container{
     width: auto;
-    height: 230px;
+    height: 250px;
     padding: 10px;
     background-color: white;
     overflow-y: hidden;
@@ -275,8 +253,8 @@ body{
     border-radius: 4px;
 }
 .nota__container{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 230px;
     padding: 10px;
     margin: 0 5px 0 5px;
     box-sizing: border-box;
@@ -290,8 +268,8 @@ body{
     align-items: center;
 }
 .nota__container--logo{
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     border-radius: 50px;
     border: 2px solid white;
 }
@@ -303,25 +281,25 @@ body{
 .nota__container--titulo{
     margin: 0 10px 0 10px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     color: #707070;
 }
 .nota__container--autor{
     margin: 0 10px 0 10px;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
     color: #707070;
 }
 .nota__container--fecha{
     margin: 0 10px 0 10px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #707070;
 }
 .nota__container--descripcion{
     margin: 0 10px 0 10px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     color: #707070;
 }
 /* css footer */
@@ -356,11 +334,7 @@ body{
     text-decoration: underline;
     cursor: pointer;
 }
-@media only screen and (max-width: 600px) {
-    .footer__container{
-        width: 100%;
-    }
-}
+
 
 /* css info */
 .info{
@@ -415,6 +389,29 @@ body{
     text-decoration: underline;
 }
 @media only screen and (max-width: 600px) {
+    .header__container--logo{
+        width: 60px;
+        height: 60px;
+    }
+    .header__container__texto{
+        width: 250px;
+    }
+    .header__container__texto--titulo{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .header__container__texto--parrafo{
+        font-size: 15px;
+    }
+    .navbar__container{
+        width: 100%;
+    }
+    .navbar__container--link{
+        font-size: 13px;
+    }
+    .footer__container{
+        width: 100%;
+    }
     .info__container--parrafo{
         font-size: 12px;
     }
