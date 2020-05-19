@@ -277,6 +277,9 @@ body{
 .nota__container{
     width: 200px;
     height: 200px;
+    padding: 10px;
+    margin: 0 5px 0 5px;
+    box-sizing: border-box;
     /* display: flex; */
     background-color: #F6F7F8;
     border-radius: 5px;
