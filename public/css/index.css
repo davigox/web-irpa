@@ -106,11 +106,11 @@ body{
 /* css container */
 
 .container{
-    background-color: #F2F9FF;
+    background-color: #D4E9FC;
     height: calc(100vh + 500px);
 }
 .main__container{
-    width: 90%;
+    width: 95%;
     margin: 0;
     padding: 0;
 }
