@@ -93,18 +93,6 @@ body{
     font-size: 12px;
     color: #707070;
 }
-.imagen__container--link{
-    text-decoration: none;
-    cursor: pointer;
-    color: #499FEB;
-    font-weight: 500;
-    font-size: 12px;
-}
-.imagen__container--link:hover{
-    text-decoration: underline;
-    text-decoration-color: royalblue;
-    cursor: pointer;
-}
 /* css videos */
 .videos__container{
     width: auto;
@@ -165,19 +153,7 @@ body{
     font-size: 12px;
     color: #707070;
 }
-.video__container--link{
-    margin-left: 10px;
-    text-decoration: none;
-    cursor: pointer;
-    color: #499FEB;
-    font-weight: 500;
-    font-size: 12px;
-}
-.video__container--link:hover{
-    text-decoration: underline;
-    text-decoration-color: royalblue;
-    cursor: pointer;
-}
+
 
 /* css Notas */
 .notas__container{
@@ -253,6 +229,19 @@ body{
     color: #707070;
 }
 
+.link{
+    margin-left: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #499FEB;
+    font-weight: 500;
+    font-size: 12px;
+}
+.link:hover{
+    text-decoration: underline;
+    text-decoration-color: royalblue;
+    cursor: pointer;
+}
 
 /* css info */
 .info{
@@ -305,4 +294,9 @@ body{
 }
 .info__container--link:hover{
     text-decoration: underline;
+}
+@media only screen and (max-width: 700px) {
+    .info__container--parrafo{
+        font-size: 12px;
+    }
 }

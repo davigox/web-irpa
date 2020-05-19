@@ -69,3 +69,35 @@ body{
     font-size: 16px;
     color: #707070;
 }
+
+@media only screen and (max-width: 700px) {
+    .imagen__container{
+        flex-direction: column;
+        width: 100%;
+        height: 500px;
+        /* background-color: black; */
+
+    }
+    .imagen__container--img{
+        width: 100%;
+        height: 60%;
+    }
+    .imagen__container--container{
+        height: 40%;
+    }
+    .imagen__container--titulo{
+        font-size: 14px;
+    }
+    .imagen__container--autor{
+        font-size: 12px;
+    }
+    .imagen__container--fecha{
+        font-size: 12px;
+    }
+    .imagen__container--descripcion{
+        font-size: 14px;
+    }
+    .imagen__container--contenido{
+        font-size: 14px;
+    }
+}

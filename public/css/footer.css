@@ -31,11 +31,8 @@
     cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .footer__container{
         width: 100%;
-    }
-    .info__container--parrafo{
-        font-size: 12px;
     }
 }
