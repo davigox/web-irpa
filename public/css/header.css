@@ -21,7 +21,7 @@
     border: 2px solid white;
 }
 .header__container__texto{
-    width: 500px;
+    width: 700px;
     display: flex;
     flex-direction: column;
     text-align: end;
@@ -39,6 +39,7 @@
     font-weight: 400;
     font-size: 20px;
     margin: 0;
+    letter-spacing: 2px;
 }
 @media only screen and (max-width: 700px) {
     .header__container--logo{
