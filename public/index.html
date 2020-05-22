@@ -39,7 +39,7 @@
         <div class="navbar__container">
             <a class="navbar__container--link" href="#">Todo</a>
             <a class="navbar__container--link" href="#">Mis post</a>
-            <a class="navbar__container--link modal-trigger" href="#modalPublicar">Hacer un post</a>
+            <a id="hacerPublicacion" class="navbar__container--link">Publicar</a>
             <a class="navbar__container--link" href="#">Contactenos</a>
         </div>
     </nav>
@@ -136,7 +136,7 @@
     <!-- Modal Structure publicar -->
     <div id="modalPublicar" class="modal publicar">
         <div class="publicar__container">
-            <div class="publicar__container--imagen">
+            <div id="publicarImagen" class="publicar__container--imagen">
                 Publicar imagen
             </div>
             <div class="publicar__container--video">
@@ -147,6 +147,28 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Structure Imagen -->
+    <div id="modalImagen" class="modal imagen">
+        <form class="imagen__container">
+            <h3 class="imagen__container--titulo">Título:</h3>
+            <input class="imagen__container--input" type="text"/>
+            <h3 class="imagen__container--titulo">Autor:</h3>
+            <input class="imagen__container--input" type="text"/>
+            <h3 class="imagen__container--titulo">Descripción:</h3>
+            <input class="imagen__container--input" type="text"/>
+            <h3 class="imagen__container--titulo">Contenido:</h3>
+            <textarea class="imagen__container--input2" name="" id="" cols="30" rows="10"></textarea>
+            <h3 class="imagen__container--titulo">Archivo de imagen:</h3>
+            <input id="file-upload" class="imagen__container--input3" type="file" value="upload" id="btnUploadFile" />
+            <div class="progreso">
+                <div class="porcentaje"></div>
+            </div>
+            
+            <button class="imagen__container--button">Publicar</button>
+        </form>
+    </div>
+
 
     <div class="info">
         <div class="info__container">
@@ -186,10 +208,14 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
     <script src="./config/configFirebase.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/auth/Auth.js"></script>
     <script src="./js/auth/authController.js"></script>
+    <script src="./js/publicar/Publicar.js"></script>
+    <script src="./js/publicar/publicarController.js"></script>
 </body>
 
 </html>
