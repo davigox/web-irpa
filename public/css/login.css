@@ -1,57 +1,43 @@
-body{
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-}
 
-/* css container */
 
-.container{
-    background-color: #D4E9FC;
-    height: calc(100vh + 350px);
-    display: flex;
-    justify-content: center;
-}
-.main__container{
-    width: 95%;
-    margin: 0;
-    padding: 0;
-}
 .login{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    border-radius: 20px;
+    width: 50%;
 }
 .login__container{
-    width: 50%;
-    background-color: #499FEB;
-    box-shadow: 2px 2px 6px #02559E;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
+    display: inline-block;
+    align-content: center;
 }
-.login__container--titulo{
-    margin: 0;
-    margin-bottom: 10px;
+.login__cotainer--titulo{
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: #146BB8;
+}
+.login__container label{
     font-weight: 500;
     font-size: 16px;
-    color: white;
+    color: #146BB8;
 }
-.login__container--input{
+.login__container input{
     margin: 0;
     margin-bottom: 10px;
     padding: 0 10px;
-    width: 90%;
+    width: 50%;
     height: 30px;
     border: none;
-    background-color: white;
+    background-color: red;
     border-radius: 15px;
     outline: none;
-    font-weight: 400;
+    font-weight: 900;
     font-size: 16   px;
     color: #496278;
+}
+.div-login__container--button{
+    text-align: center;
 }
 .login__container--button{
     margin: 0;
@@ -69,7 +55,10 @@ body{
     background-color: #00BB2D;
 }
 @media only screen and (max-width: 700px) {
+    .login{
+        width: 90%;
+    }
     .login__container{
-        width: 95%;
+        width: 100%;
     }
 }
