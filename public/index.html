@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/publicar.css">
     <link rel="stylesheet" href="./css/footer.css">
     <title>Web Fundación Irpañani</title>
 </head>
@@ -38,7 +39,7 @@
         <div class="navbar__container">
             <a class="navbar__container--link" href="#">Todo</a>
             <a class="navbar__container--link" href="#">Mis post</a>
-            <a class="navbar__container--link" href="#">Hacer un post</a>
+            <a class="navbar__container--link modal-trigger" href="#modalPublicar">Hacer un post</a>
             <a class="navbar__container--link" href="#">Contactenos</a>
         </div>
     </nav>
@@ -129,6 +130,21 @@
                 </div>
             </form>
 
+        </div>
+    </div>
+   
+    <!-- Modal Structure publicar -->
+    <div id="modalPublicar" class="modal publicar">
+        <div class="publicar__container">
+            <div class="publicar__container--imagen">
+                Publicar imagen
+            </div>
+            <div class="publicar__container--video">
+                Publicar video
+            </div>
+            <div class="publicar__container--nota">
+                Publicar nota
+            </div>
         </div>
     </div>
 

@@ -1,26 +1,8 @@
-body{
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-}
-
-/* css container */
-
-.container{
-    background-color: #D4E9FC;
-    height: calc(100vh + 350px);
-    display: flex;
-    justify-content: center;
-}
-.main__container{
-    width: 95%;
-    margin: 0;
-    padding: 0;
-}
 .publicar{
+    background-color: #f4f4f4;
+    border-radius: 25px;
     margin-top: 10px;
-    width: 100%;
+    width: 60%;
     display: flex;
     justify-content: center;
 }
@@ -37,7 +19,7 @@ body{
     align-items: center;
     color: white;
     border-radius: 20px;
-    width: 250px;
+    width: 90%;
     margin-bottom: 10px;
     background-color: #146BB8;
     height: 60px;
@@ -55,7 +37,7 @@ body{
     align-items: center;
     color: white;
     border-radius: 20px;
-    width: 250px;
+    width: 90%;
     margin-bottom: 10px;
     height: 60px;
     background-color: #2C84D1;
@@ -73,7 +55,7 @@ body{
     align-items: center;
     color: white;
     border-radius: 20px;
-    width: 250px;
+    width: 90%;
     margin-bottom: 10px;
     height: 60px;
     background-color: #499FEB;
