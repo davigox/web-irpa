@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/publicar.css">
+    <link rel="stylesheet" href="./css/publicar-imagen.css">
     <link rel="stylesheet" href="./css/footer.css">
     <title>Web Fundación Irpañani</title>
 </head>
@@ -149,24 +150,38 @@
     </div>
 
     <!-- Modal Structure Imagen -->
-    <div id="modalImagen" class="modal imagen">
-        <form class="imagen__container">
-            <h3 class="imagen__container--titulo">Título:</h3>
-            <input class="imagen__container--input" type="text"/>
-            <h3 class="imagen__container--titulo">Autor:</h3>
-            <input class="imagen__container--input" type="text"/>
-            <h3 class="imagen__container--titulo">Descripción:</h3>
-            <input class="imagen__container--input" type="text"/>
-            <h3 class="imagen__container--titulo">Contenido:</h3>
-            <textarea class="imagen__container--input2" name="" id="" cols="30" rows="10"></textarea>
-            <h3 class="imagen__container--titulo">Archivo de imagen:</h3>
-            <input id="file-upload" class="imagen__container--input3" type="file" value="upload" id="btnUploadFile" />
-            <div class="progreso">
-                <div class="porcentaje"></div>
-            </div>
-            
-            <button class="imagen__container--button">Publicar</button>
-        </form>
+    <div id="modalImagen" class="modal publicar-imagen">
+        <div class="container">
+            <form class="col s12 publicar-imagen__container">
+                <div class="publicar-imagen__container--titulo">
+                    Publique una imagen
+                </div>
+                <div class="input-field">
+                    <input type="text" id="imagenTitulo">
+                    <label for="imagenTitulo">Título:</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="imagenAutor">
+                    <label for="imagenAutor">Autor:</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="imagenDescripcion">
+                    <label for="imagenDescripcion">Descripción:</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="imagenContenido"></textarea>
+                    <label for="imagenContenido">Contenido:</label>
+                </div>
+                <h3 class="publicar-imagen__container--titulo">Archivo de imagen:</h3>
+                <input id="file-upload" class="publicar-imagen__container--input3" type="file" value="upload" id="btnUploadFile" />
+                <div class="progreso">
+                    <div class="porcentaje"></div>
+                </div>
+                <div class="div-button">
+                    <button id="btnPublicarImagen" class="publicar-imagen__container--button">Publicar</button>
+                </div>
+            </form>
+        </div>
     </div>
 
 

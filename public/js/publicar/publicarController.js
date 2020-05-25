@@ -1,5 +1,6 @@
 const hacerPublicacion = document.querySelector('#hacerPublicacion');
 const publicarImagen = document.querySelector('#publicarImagen');
+const btnPublicarImagen = document.querySelector('#btnPublicarImagen');
 
 
 hacerPublicacion.addEventListener('click', function(){
@@ -21,3 +22,7 @@ publicarImagen.addEventListener('click', function(){
     const instanciaImagen = M.Modal.getInstance(modalImagen);
     instanciaImagen.open();
 });
+btnPublicarImagen.addEventListener('click', function(){
+    event.preventDefault();
+    M.toast({html: `publicado`,displayLength: 1000});
+})

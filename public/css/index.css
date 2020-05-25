@@ -63,7 +63,7 @@ body{
 }
 .imagen__container--img{
     width: 200px;
-    height: 230px;
+    height: 240px;
     border-radius: 5px 0px 0px 5px;
 }
 .imagen__container--container{
@@ -189,7 +189,7 @@ body{
     width: 300px;
     height: 240px;
     padding: 10px;
-    margin: 0 5px 0 5px;
+    margin: 0 15px 0 0;
     box-sizing: border-box;
     /* display: flex; */
     background-color: #F6F7F8;
