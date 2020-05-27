@@ -1,6 +1,13 @@
 const hacerPublicacion = document.querySelector('#hacerPublicacion');
+
 const publicarImagen = document.querySelector('#publicarImagen');
 const btnPublicarImagen = document.querySelector('#btnPublicarImagen');
+
+const publicarVideo = document.querySelector('#publicarVideo');
+const btnPublicarVideo = document.querySelector('#btnPublicarVideo');
+// controles de notas
+const publicarNota = document.querySelector('#publicarNota');
+const btnPublicarNota = document.querySelector('#btnPublicarNota');
 
 const btnUploadImagen = document.querySelector('#file-upload');
 
@@ -72,3 +79,87 @@ btnUploadImagen.addEventListener('change', function(e){
     const publicar = new Publicar();
     publicar.subirImagen(file, user.uid);
 }, false)
+
+publicarVideo.addEventListener('click', function(){
+    const modalPublicar = document.getElementById('modalPublicar');
+    const instanciaPublicar = M.Modal.getInstance(modalPublicar);
+    instanciaPublicar.close();
+    const modalVideo = document.getElementById('modalVideo');
+    const instanciaVideo = M.Modal.getInstance(modalVideo);
+    instanciaVideo.open();
+});
+btnPublicarVideo.addEventListener('click', function(){
+    event.preventDefault();
+    const publicar = new Publicar();
+    
+    const user = firebase.auth().currentUser
+    console.log(user.uid)
+    if(user == null){
+        M.toast({html: `Debes de iniciar sesión para publicar`,displayLength: 1000});
+        return 
+    }
+    const titulo = document.querySelector('#videoTitulo').value;
+    const autor = document.querySelector('#videoAutor').value;
+    const descripcion = document.querySelector('#videoDescripcion').value;
+    const videoLink = `https://www.youtube.com/embed/${document.querySelector('#videoURL').value}`;
+    
+    publicar.publicarVideo(
+        user.uid,
+        user.email,
+        titulo,
+        autor,
+        descripcion,
+        videoLink
+    )
+    .then(resp => {
+        M.toast({html: `Video publicado correctamente`,displayLength: 2000});
+        const modal = document.querySelector('#modalVideo')
+        const modalInstancia = M.Modal.getInstance(modal);
+        modalInstancia.close()
+    })
+    .catch(err => {
+        M.toast({html: `Error: ${err}`,displayLength: 2000});
+    })
+})
+// notas
+publicarNota.addEventListener('click', function(){
+    const modalPublicar = document.getElementById('modalPublicar');
+    const instanciaPublicar = M.Modal.getInstance(modalPublicar);
+    instanciaPublicar.close();
+    const modalNota = document.getElementById('modalNota');
+    const instanciaVideo = M.Modal.getInstance(modalNota);
+    instanciaVideo.open();
+});
+btnPublicarNota.addEventListener('click', function(){
+    event.preventDefault();
+    const publicar = new Publicar();
+    
+    const user = firebase.auth().currentUser
+    console.log(user.uid)
+    if(user == null){
+        M.toast({html: `Debes de iniciar sesión para publicar`,displayLength: 1000});
+        return 
+    }
+    const titulo = document.querySelector('#notaTitulo').value;
+    const autor = document.querySelector('#notaAutor').value;
+    const descripcion = document.querySelector('#notaDescripcion').value;
+    const contenido = document.querySelector('#notaContenido').value;
+    
+    publicar.publicarNota(
+        user.uid,
+        user.email,
+        titulo,
+        autor,
+        descripcion,
+        contenido
+    )
+    .then(resp => {
+        M.toast({html: `Nota publicada correctamente`,displayLength: 2000});
+        const modal = document.querySelector('#modalNota')
+        const modalInstancia = M.Modal.getInstance(modal);
+        modalInstancia.close()
+    })
+    .catch(err => {
+        M.toast({html: `Error: ${err}`,displayLength: 2000});
+    })
+})

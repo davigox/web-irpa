@@ -11,13 +11,14 @@ class Publicar{
             descripcion: descripcion,
             contenido: contenido,
             imagenLink: imagenLink,
+            tipo: 'imagen',
             fecha: firebase.firestore.FieldValue.serverTimestamp()
         })
         .then(refDoc => {
-            M.toast({html: `Imagen guardada y punlicada correctamente id: ${refDoc.id}`,displayLength: 1000});
+            M.toast({html: `Imagen guardada y punlicada correctamente id: ${refDoc.id}`,displayLength: 2000});
         })
         .catch(error => {
-            M.toast({html: `Error al guardar la publicación error: ${error}`,displayLength: 1000});
+            M.toast({html: `Error al guardar la publicación error: ${error}`,displayLength: 2000});
         })
     }
     subirImagen(file, uid){
@@ -38,6 +39,42 @@ class Publicar{
                 .catch(err => {
                     M.toast({html: `Error obteniendo la URL: ${err}`,displayLength: 2000});
                 })
+        })
+    }
+    publicarVideo(uid, emailUser, titulo, autor, descripcion, videoLink){
+        return this.db.collection('publicaciones').add({
+            uid: uid,
+            emailUser: emailUser,
+            autor: autor,
+            titulo: titulo,
+            descripcion: descripcion,
+            videoLink: videoLink,
+            tipo: 'video',
+            fecha: firebase.firestore.FieldValue.serverTimestamp()
+        })
+        .then(refDoc => {
+            M.toast({html: `video guardado y publicado correctamente id: ${refDoc.id}`,displayLength: 2000});
+        })
+        .catch(error => {
+            M.toast({html: `Error al guardar la publicación error: ${error}`,displayLength: 2000});
+        })
+    }
+    publicarNota(uid, emailUser, titulo, autor, descripcion, contenido){
+        return this.db.collection('publicaciones').add({
+            uid: uid,
+            emailUser: emailUser,
+            autor: autor,
+            titulo: titulo,
+            descripcion: descripcion,
+            contenido: contenido,
+            tipo: 'nota',
+            fecha: firebase.firestore.FieldValue.serverTimestamp()
+        })
+        .then(refDoc => {
+            M.toast({html: `nota guardada y publicada correctamente id: ${refDoc.id}`,displayLength: 2000});
+        })
+        .catch(error => {
+            M.toast({html: `Error al guardar la publicación error: ${error}`,displayLength: 2000});
         })
     }
 }

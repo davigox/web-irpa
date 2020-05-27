@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/publicar.css">
     <link rel="stylesheet" href="./css/publicar-imagen.css">
+    <link rel="stylesheet" href="./css/publicar-video.css">
+    <link rel="stylesheet" href="./css/publicar-nota.css">
     <link rel="stylesheet" href="./css/footer.css">
     <title>Web Fundación Irpañani</title>
 </head>
@@ -140,10 +142,10 @@
             <div id="publicarImagen" class="publicar__container--imagen">
                 Publicar imagen
             </div>
-            <div class="publicar__container--video">
+            <div id="publicarVideo" class="publicar__container--video">
                 Publicar video
             </div>
-            <div class="publicar__container--nota">
+            <div id="publicarNota" class="publicar__container--nota">
                 Publicar nota
             </div>
         </div>
@@ -179,6 +181,64 @@
                 </div>
                 <div class="div-button">
                     <button id="btnPublicarImagen" class="publicar-imagen__container--button">Publicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal Structure video -->
+    <div id="modalVideo" class="modal publicar-video">
+        <div class="container">
+            <form class="col s12 publicar-video__container">
+                <div class="publicar-video__container--titulo">
+                    Publique un video
+                </div>
+                <div class="input-field">
+                    <input type="text" id="videoTitulo">
+                    <label for="videoTitulo">Título:</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="videoAutor">
+                    <label for="videoAutor">Autor:</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="videoDescripcion">
+                    <label for="videoDescripcion">Descripción:</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="videoURL">
+                    <label for="videoURL">URL del Video:</label>
+                </div>
+                <div class="div-button">
+                    <button id="btnPublicarVideo" class="publicar-video__container--button">Publicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal Structure nota -->
+    <div id="modalNota" class="modal publicar-nota">
+        <div class="container">
+            <form class="col s12 publicar-nota__container">
+                <div class="publicar-nota__container--titulo">
+                    Publique una nota
+                </div>
+                <div class="input-field">
+                    <input type="text" id="notaTitulo">
+                    <label for="notaTitulo">Título:</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="notaAutor">
+                    <label for="notaAutor">Autor:</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="notaDescripcion">
+                    <label for="notaDescripcion">Descripción:</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="notaContenido"></textarea>
+                    <label for="notaContenido">Contenido:</label>
+                </div>
+                <div class="div-button">
+                    <button id="btnPublicarNota" class="publicar-nota__container--button">Publicar</button>
                 </div>
             </form>
         </div>
