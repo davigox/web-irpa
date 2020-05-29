@@ -79,6 +79,8 @@ class Publicar{
     }
     consultarImagenesPublicadas(){
         this.db.collection('publicaciones')
+            .orderBy('fecha', 'desc')
+            .where('tipo', "==", 'imagen')
             .onSnapshot(querySnapshot => {
                 document.querySelector('.imagenes__container').innerHTML="";
                 if(querySnapshot.empty){
@@ -93,7 +95,7 @@ class Publicar{
                             imagen.data().autor,
                             imagen.data().descripcion,
                             imagen.data().contenido,
-                            imagen.data().fecha,
+                            Utilidad.obtenerFecha(imagen.data().fecha.toDate()),
                             imagen.data().imagenLink,
                         );
                         document.querySelector('.imagenes__container').appendChild(imagenHTML)
@@ -104,14 +106,16 @@ class Publicar{
     }
     templateImagen(id, titulo, autor, descripcion
         , contenido, fecha, imagenLink){
-            let nodo = document.createElement(`<div id="${id}" class="imagen__container">
-            <img class="imagen__container--img" src="${imagenLink}" alt="Imagen">
+            let template = document.createElement('div');
+            template.setAttribute('id', `${id}`);
+            template.setAttribute('class', 'imagen__container');
+            template.innerHTML = `<img class="imagen__container--img" src="${imagenLink}" alt="Imagen">
             <div class="imagen__container--container">
                 <h3 class="imagen__container--titulo">
                     ${titulo}
                 </h3>
                 <h5 class="imagen__container--autor">
-                    ${autor}
+                    Autor: ${autor}
                 </h5>
                 <p class="imagen__container--fecha">
                     ${fecha}
@@ -120,8 +124,7 @@ class Publicar{
                     ${descripcion}
                 </p>
                 <a class="link" href="http://192.168.0.10:9080/imagenes.html">Ver mas..</a>
-            </div>
-        </div>`);
-            return nodo;
+            </div>`
+            return template;
     }
 }
