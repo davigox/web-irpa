@@ -77,4 +77,51 @@ class Publicar{
             M.toast({html: `Error al guardar la publicación error: ${error}`,displayLength: 2000});
         })
     }
+    consultarImagenesPublicadas(){
+        this.db.collection('publicaciones')
+            .onSnapshot(querySnapshot => {
+                document.querySelector('.imagenes__container').innerHTML="";
+                if(querySnapshot.empty){
+                    M.toast({html: `Imagenes SI esta vacio`,displayLength: 2000});
+                }else{
+                    M.toast({html: `Imagenes NO esta vacio`,displayLength: 2000});
+                    
+                    querySnapshot.forEach(imagen => {
+                        let imagenHTML = this.templateImagen(
+                            imagen.id,
+                            imagen.data().titulo,
+                            imagen.data().autor,
+                            imagen.data().descripcion,
+                            imagen.data().contenido,
+                            imagen.data().fecha,
+                            imagen.data().imagenLink,
+                        );
+                        document.querySelector('.imagenes__container').appendChild(imagenHTML)
+                        console.log(`Currente data: ${imagen.id}`)
+                    })
+                }
+            })
+    }
+    templateImagen(id, titulo, autor, descripcion
+        , contenido, fecha, imagenLink){
+            let nodo = document.createElement(`<div id="${id}" class="imagen__container">
+            <img class="imagen__container--img" src="${imagenLink}" alt="Imagen">
+            <div class="imagen__container--container">
+                <h3 class="imagen__container--titulo">
+                    ${titulo}
+                </h3>
+                <h5 class="imagen__container--autor">
+                    ${autor}
+                </h5>
+                <p class="imagen__container--fecha">
+                    ${fecha}
+                </p>
+                <p class="imagen__container--descripcion">
+                    ${descripcion}
+                </p>
+                <a class="link" href="http://192.168.0.10:9080/imagenes.html">Ver mas..</a>
+            </div>
+        </div>`);
+            return nodo;
+    }
 }

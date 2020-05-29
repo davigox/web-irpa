@@ -21,3 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var modalLogin = M.Modal.init(modals);
 
   });
+
+const publicar = new Publicar();
+publicar.consultarImagenesPublicadas();
