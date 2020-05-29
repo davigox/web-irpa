@@ -159,7 +159,7 @@ class Publicar{
             template.setAttribute('class', 'video__container');
             template.innerHTML = `
             <iframe class="video__container--video" type="text/html"
-            src='${videoLink}' frameborder="0"></iframe>
+            src='${videoLink}' frameborder="0" allowfullscreen="true"></iframe>
         <h3 class="video__container--titulo">
             ${titulo}
         </h3>
