@@ -115,7 +115,7 @@ body{
     height: 10px;
 }
 .videos__container::-webkit-scrollbar-thumb {
-    background: #146BB8;
+    background: #ff8000;
     border-radius: 4px;
 }
 .videos__container::-webkit-scrollbar-track {
@@ -179,7 +179,7 @@ body{
     height: 10px;
 }
 .notas__container::-webkit-scrollbar-thumb {
-    background: #499FEB;
+    background: #ff8000;
     border-radius: 4px;
 }
 .notas__container::-webkit-scrollbar-track {
@@ -210,7 +210,7 @@ body{
 .nota__container--container2{
     box-sizing: border-box;
     padding-left: 5px;
-    width: 110px;
+    width: 100%;
 }
 .nota__container--titulo{
     margin: 0 10px 0 10px;

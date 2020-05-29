@@ -94,7 +94,6 @@ class Publicar{
                             imagen.data().titulo,
                             imagen.data().autor,
                             imagen.data().descripcion,
-                            imagen.data().contenido,
                             Utilidad.obtenerFecha(imagen.data().fecha.toDate()),
                             imagen.data().imagenLink,
                         );
@@ -105,7 +104,7 @@ class Publicar{
             })
     }
     templateImagen(id, titulo, autor, descripcion
-        , contenido, fecha, imagenLink){
+        , fecha, imagenLink){
             let template = document.createElement('div');
             template.setAttribute('id', `${id}`);
             template.setAttribute('class', 'imagen__container');
@@ -125,6 +124,106 @@ class Publicar{
                 </p>
                 <a class="link" href="http://192.168.0.10:9080/imagenes.html">Ver mas..</a>
             </div>`
+            return template;
+    }
+    consultarVideosPublicados(){
+        this.db.collection('publicaciones')
+            .orderBy('fecha', 'desc')
+            .where('tipo', "==", 'video')
+            .onSnapshot(querySnapshot => {
+                document.querySelector('.videos__container').innerHTML="";
+                if(querySnapshot.empty){
+                    M.toast({html: `Videos SI esta vacio`,displayLength: 2000});
+                }else{
+                    M.toast({html: `Videos NO esta vacio`,displayLength: 2000});
+                    
+                    querySnapshot.forEach(video => {
+                        let videoHTML = this.templateVideo(
+                            video.id,
+                            video.data().titulo,
+                            video.data().autor,
+                            video.data().descripcion,
+                            Utilidad.obtenerFecha(video.data().fecha.toDate()),
+                            video.data().videoLink,
+                        );
+                        document.querySelector('.videos__container').appendChild(videoHTML)
+                        console.log(`Currente data: ${video.id}`)
+                    })
+                }
+            })
+    }
+    templateVideo(id, titulo, autor, descripcion
+        , fecha, videoLink){
+            let template = document.createElement('div');
+            template.setAttribute('id', `${id}`);
+            template.setAttribute('class', 'video__container');
+            template.innerHTML = `
+            <iframe class="video__container--video" type="text/html"
+            src='${videoLink}' frameborder="0"></iframe>
+        <h3 class="video__container--titulo">
+            ${titulo}
+        </h3>
+        <h5 class="video__container--autor">
+            Autor:${autor}
+        </h5>
+        <p class="video__container--fecha">
+            ${fecha}
+        </p>
+        <p class="video__container--descripcion">
+            ${descripcion}
+        </p>
+        <a class="link" href="http://192.168.0.10:9080/videos.html">Ver ...</a>`
+            return template;
+    }
+    consultarNotasPublicadas(){
+        this.db.collection('publicaciones')
+            .orderBy('fecha', 'desc')
+            .where('tipo', "==", 'nota')
+            .onSnapshot(querySnapshot => {
+                document.querySelector('.notas__container').innerHTML="";
+                if(querySnapshot.empty){
+                    M.toast({html: `Notas SI esta vacio`,displayLength: 2000});
+                }else{
+                    M.toast({html: `Notas NO esta vacio`,displayLength: 2000});
+                    
+                    querySnapshot.forEach(nota => {
+                        let notaHTML = this.templateNota(
+                            nota.id,
+                            nota.data().titulo,
+                            nota.data().autor,
+                            nota.data().descripcion,
+                            Utilidad.obtenerFecha(nota.data().fecha.toDate()),
+                        );
+                        document.querySelector('.notas__container').appendChild(notaHTML)
+                        console.log(`Currente data: ${nota.id}`)
+                    })
+                }
+            })
+    }
+    templateNota(id, titulo, autor, descripcion
+        , fecha){
+            let template = document.createElement('div');
+            template.setAttribute('id', `${id}`);
+            template.setAttribute('class', 'nota__container');
+            template.innerHTML = `
+            <div class="nota__container--container1">
+            <img class="nota__container--logo" src="./images/IRPANANI.jpg" alt="Logo">
+            <div class="nota__container--container2">
+                <h3 class="nota__container--titulo">
+                    ${titulo}
+                </h3>
+                <h5 class="nota__container--autor">
+                    Autor: ${autor}
+                </h5>
+                <p class="nota__container--fecha">
+                    ${fecha}
+                </p>
+            </div>
+        </div>
+        <div class="nota__container--descripcion">
+            ${descripcion}
+        </div>
+        <a class="link" href="http://192.168.0.10:9080/notas.html">Ver ...</a>`
             return template;
     }
 }
