@@ -20,6 +20,7 @@
     color: white;
     border-radius: 20px;
     width: 90%;
+    margin-top: 10px ;
     margin-bottom: 10px;
     background-color: #146BB8;
     height: 60px;
@@ -46,24 +47,6 @@
     box-shadow: 2px 2px 6px #02559E;
 }
 .publicar__container--video:hover{
-    cursor: pointer;
-    background-color: #02559E;
-}
-.publicar__container--nota{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 20px;
-    width: 90%;
-    margin-bottom: 10px;
-    height: 60px;
-    background-color: #499FEB;
-    font-weight: 700;
-    font-size: 20px;
-    box-shadow: 2px 2px 6px #02559E;
-}
-.publicar__container--nota:hover{
     cursor: pointer;
     background-color: #02559E;
 }

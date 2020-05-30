@@ -2,14 +2,14 @@ class Publicar{
     constructor (){
         this.db = firebase.firestore();
     }
-    publicarImagen(uid, emailUser, titulo, autor, descripcion, contenido, imagenLink){
+    publicarImagen(uid, emailUser, titulo, autor, descripcion, url, imagenLink){
         return this.db.collection('publicaciones').add({
             uid: uid,
             emailUser: emailUser,
             autor: autor,
             titulo: titulo,
             descripcion: descripcion,
-            contenido: contenido,
+            url: url,
             imagenLink: imagenLink,
             tipo: 'imagen',
             fecha: firebase.firestore.FieldValue.serverTimestamp()

@@ -140,13 +140,10 @@
     <div id="modalPublicar" class="modal publicar">
         <div class="publicar__container">
             <div id="publicarImagen" class="publicar__container--imagen">
-                Publicar imagen
+                Publicar con imagen
             </div>
             <div id="publicarVideo" class="publicar__container--video">
                 Publicar video
-            </div>
-            <div id="publicarNota" class="publicar__container--nota">
-                Publicar nota
             </div>
         </div>
     </div>
@@ -156,7 +153,7 @@
         <div class="container">
             <form class="col s12 publicar-imagen__container">
                 <div class="publicar-imagen__container--titulo">
-                    Publique una imagen
+                    Publique con una imagen
                 </div>
                 <div class="input-field">
                     <input type="text" id="imagenTitulo">
@@ -171,8 +168,8 @@
                     <label for="imagenDescripcion">Descripción:</label>
                 </div>
                 <div class="input-field">
-                    <textarea id="imagenContenido"></textarea>
-                    <label for="imagenContenido">Contenido:</label>
+                    <textarea id="imagenUrl"></textarea>
+                    <label for="imagenContenido">url:</label>
                 </div>
                 <h3 class="publicar-imagen__container--titulo">Archivo de imagen:</h3>
                 <input id="file-upload" class="publicar-imagen__container--input3" type="file" value="upload" id="btnUploadFile" />
@@ -214,36 +211,6 @@
             </form>
         </div>
     </div>
-    <!-- Modal Structure nota -->
-    <div id="modalNota" class="modal publicar-nota">
-        <div class="container">
-            <form class="col s12 publicar-nota__container">
-                <div class="publicar-nota__container--titulo">
-                    Publique una nota
-                </div>
-                <div class="input-field">
-                    <input type="text" id="notaTitulo">
-                    <label for="notaTitulo">Título:</label>
-                </div>
-                <div class="input-field">
-                    <input type="text" id="notaAutor">
-                    <label for="notaAutor">Autor:</label>
-                </div>
-                <div class="input-field">
-                    <input type="text" id="notaDescripcion">
-                    <label for="notaDescripcion">Descripción:</label>
-                </div>
-                <div class="input-field">
-                    <textarea id="notaContenido"></textarea>
-                    <label for="notaContenido">Contenido:</label>
-                </div>
-                <div class="div-button">
-                    <button id="btnPublicarNota" class="publicar-nota__container--button">Publicar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
 
     <div class="info">
         <div class="info__container">
