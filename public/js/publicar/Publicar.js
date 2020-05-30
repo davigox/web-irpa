@@ -96,6 +96,7 @@ class Publicar{
                             imagen.data().descripcion,
                             Utilidad.obtenerFecha(imagen.data().fecha.toDate()),
                             imagen.data().imagenLink,
+                            imagen.data().url
                         );
                         document.querySelector('.imagenes__container').appendChild(imagenHTML)
                         console.log(`Currente data: ${imagen.id}`)
@@ -104,7 +105,7 @@ class Publicar{
             })
     }
     templateImagen(id, titulo, autor, descripcion
-        , fecha, imagenLink){
+        , fecha, imagenLink, url){
             let template = document.createElement('div');
             template.setAttribute('id', `${id}`);
             template.setAttribute('class', 'imagen__container');
@@ -122,7 +123,7 @@ class Publicar{
                 <p class="imagen__container--descripcion">
                     ${descripcion}
                 </p>
-                <a class="link" href="http://192.168.0.10:9080/imagenes.html">Ver mas..</a>
+                <a class="link" href="${url}">Ver mas..</a>
             </div>`
             return template;
     }
@@ -172,7 +173,7 @@ class Publicar{
         <p class="video__container--descripcion">
             ${descripcion}
         </p>
-        <a class="link" href="http://192.168.0.10:9080/videos.html">Ver ...</a>`
+        `
             return template;
     }
     consultarNotasPublicadas(){

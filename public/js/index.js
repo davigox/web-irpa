@@ -25,4 +25,4 @@ document.addEventListener('DOMContentLoaded', function() {
 const publicar = new Publicar();
 publicar.consultarImagenesPublicadas();
 publicar.consultarVideosPublicados();
-publicar.consultarNotasPublicadas();
+// publicar.consultarNotasPublicadas();
