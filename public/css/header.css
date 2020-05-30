@@ -1,6 +1,6 @@
 /* css header */
 .header{
-    background-color: rgba(148, 75, 158, 0.3);
+    background-color: #3f2b96;
     height: 140px;
     display: flex;
     justify-content: center;
@@ -27,6 +27,12 @@
 .header__container--logo{
     width: 90px;
     height: 90px;
+}
+.color1{
+    color: #fbff00;
+}
+.color2{
+    color: #fbff00;
 }
 .header__container__texto{
     width: 600px;
@@ -63,7 +69,7 @@
         width: 70%;
     }
     .header__container__texto--titulo{
-        font-size: 18px;
+        font-size: 22px;
         letter-spacing: 1px;
     }
     .header__container__texto--parrafo{
