@@ -1,7 +1,7 @@
 /* css navbar */
 
 .navbar{
-    background-color: #146BB8;
+    background-color: rgba(255, 255, 255, 0.5);
     height: 40px;
     box-sizing: border-box;
     display: flex;
@@ -17,7 +17,7 @@
     /* background-color: cadetblue; */
 }
 .navbar__container--link{
-    color: #F2F9FF;
+    color: rgb(53, 52, 52);
     text-decoration: none;
     font-weight: 500;
     font-size: 20px;

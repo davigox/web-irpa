@@ -1,6 +1,6 @@
 /* css header */
 .header{
-    background-color: #02559E;
+    background-color: rgba(148, 75, 158, 0.3);
     height: 140px;
     display: flex;
     justify-content: center;
