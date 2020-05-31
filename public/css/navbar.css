@@ -1,34 +1,40 @@
 /* css navbar */
 
 .navbar{
-    background-color: rgba(255, 255, 255, 0.1);
-    border: white solid 2px;
-    border-right: none;
-    border-left: none;
-    height: 40px;
+    background: white;
+    height: 60px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .navbar__container{
+    background-color: #ececec;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 700px;
-    height: 40px;
+    justify-content: space-between;
+    width: 90%;
+    height: 60px;
+    border: 0;
+    box-shadow: 6px 3px 7px -6px #8d8d8d, -6px 3px 7px -6px #8d8d8d;
     /* background-color: cadetblue; */
 }
+.navbar__container--logo{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
 .navbar__container--link{
-    color: white;
+    background-color: white;
+    color: #5a5a5a;
     text-decoration: none;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25%;
-    height: 40px    ;
+    width: 19.8%;
+    height: 60px    ;
 }
 .navbar__container--link:hover{
     cursor: pointer;
@@ -36,10 +42,55 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 @media only screen and (max-width: 700px) {
+    .navbar__container--logo{
+        width: 60px;
+
+    }
     .navbar__container{
         width: 100%;
     }
     .navbar__container--link{
-        font-size: 13px;
+        font-size: 12px;
+    }
+}
+
+.banner{
+    background: white;
+    height: 300px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner__container{
+    background: #022f84;
+    background: radial-gradient(circle, #295bcf 0%,  #022f84 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 300px;
+    box-shadow: 6px 3px 7px -6px #8d8d8d, -6px 3px 7px -6px #8d8d8d;
+}
+.banner__container--img1{
+    width: 400px;
+}
+.banner__container--img2{
+    width: 350px;
+}
+@media only screen and (max-width: 700px) {
+    .banner__container{
+        width: 100%;
+        height: 200px;
+        flex-direction: column;
+    }
+    .banner{
+        height: 200px;
+    }
+    .banner__container--img1{
+        width: 200px;
+    }
+    .banner__container--img2{
+        width: 200px;
     }
 }
