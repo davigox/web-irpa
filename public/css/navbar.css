@@ -1,7 +1,7 @@
 /* css navbar */
 
 .navbar{
-    background: white;
+    background: rgb(192, 192, 192);
     height: 60px;
     box-sizing: border-box;
     display: flex;
@@ -10,6 +10,7 @@
 }
 .navbar__container{
     background-color: #ececec;
+    opacity: 0.9;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +40,7 @@
 .navbar__container--link:hover{
     cursor: pointer;
     /* text-decoration: underline; */
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #ffda52;
 }
 @media only screen and (max-width: 700px) {
     .navbar__container--logo{
@@ -55,7 +56,7 @@
 }
 
 .banner{
-    background: white;
+    background: rgb(192, 192, 192);
     height: 300px;
     box-sizing: border-box;
     display: flex;
@@ -64,7 +65,7 @@
 }
 .banner__container{
     background: #022f84;
-    background: radial-gradient(circle, #295bcf 0%,  #022f84 100%);
+    background: radial-gradient(circle, #fccf31 0%,  #f55555 100%);
     display: flex;
     align-items: center;
     justify-content: center;
