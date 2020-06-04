@@ -7,10 +7,8 @@
     box-sizing: border-box;
 }
 .header__container{
-    background-image: url("../images/banner.svg"); 
-    background-repeat: no-repeat;
-    background-size: 1136px 140px;
-    opacity: 0.9;
+    background: url('../images/stars.svg'), white;
+    background-repeat: repeat;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -58,6 +56,9 @@
     letter-spacing: 2px;
 }
 @media only screen and (max-width: 700px) {
+    .header__container{
+        width: 100%;
+    }
     .header__container--borde{
         width: 90px;
         height: 90px;
